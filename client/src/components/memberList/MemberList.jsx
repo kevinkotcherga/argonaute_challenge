@@ -3,14 +3,13 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 // import { selectArgonautes, setArgonautesData } from '../../store';
 import './memberList.scss'
-import store, {
-	selectArgonautes,
+import {
 	setArgonautesData
-} from '../../store';
+} from '../../features/argonaute/argonautesSlice';
 
 const MemberList = () => {
   // selectArgonautes est récupéré dans store.ts
-  const argonautes = useSelector(selectArgonautes);
+  const argonautes = useSelector((state) => state.argonautes.argonautes);
 	// useDispatch déclenche l'action, la logique du reducer
 	const dispatch = useDispatch();
 	// use Effect = au lancement du composant, axios ira récupérer la data

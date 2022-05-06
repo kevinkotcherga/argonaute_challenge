@@ -1,10 +1,9 @@
 import axios from 'axios';
 import { useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addArgonaute } from '../../feature/argonautesSlice';
 import MemberList from '../memberList/MemberList';
+import { addArgonaute } from '../../features/argonaute/argonautesSlice';
 import './main.scss';
-import { addArgonaute } from '../../store';
 
 const Main = () => {
   const [name, setName] = useState("");
