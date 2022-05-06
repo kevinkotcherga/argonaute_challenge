@@ -3,14 +3,14 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
-// dotenv permet de récupérer les informations inscritent dans .env
+// dotenv permet de récupérer les informations inscrits dans .env
 const dotenv = require('dotenv');
 dotenv.config();
 
-// Importations des routes
+// Importation des routes
 const argonauteRoute = require('./routes/argonaute');
 
-// Importation de la DB mongodb avec mongoose
+// Importation de la DB mongoDB avec mongoose
 mongoose
 	.connect(process.env.MONGO_URL)
 	.then(() => console.log('DBconnextion Successfull!'))
