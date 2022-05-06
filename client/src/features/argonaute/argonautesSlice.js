@@ -5,7 +5,7 @@ export const argonautesSlice = createSlice({
 	name: 'argonautes',
 	// 2) STATE DE BASE
 	initialState: {
-    // Le state de base est nul, il sera ensuite incrémenté avec la base de données
+    // Le state de base est nul, il sera ensuite incrémenté avec la base de donnée
     argonautes: null,
   },
 	// 3) REDUCERS
@@ -28,5 +28,5 @@ export const argonautesSlice = createSlice({
 // Les reducers sont exportés pour être utilisé dans les composants
 export const { setArgonautesData, addArgonaute } =
 	argonautesSlice.actions;
-// pisctureSlice
+
 export default argonautesSlice.reducer;
