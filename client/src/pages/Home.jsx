@@ -1,5 +1,5 @@
-import Header from '../components/header/Header'
-import './home.scss'
+import Header from '../components/header/Header';
+import './home.scss';
 
 const Home = () => {
   return (
@@ -9,4 +9,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
