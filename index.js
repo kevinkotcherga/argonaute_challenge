@@ -7,11 +7,19 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
 
+// Importations des routes
+const argonauteRoute = require('./routes/argonaute');
+
 // Importation de la DB mongodb avec mongoose
 mongoose
 	.connect(process.env.MONGO_URL)
 	.then(() => console.log('DBconnextion Successfull!'))
 	.catch(err => console.log(err));
+
+// Connexion aux routes
+app.use(cors());
+app.use(express.json());
+app.use('/argonautes', argonauteRoute);
 
 // Connexion au serveur
 app.listen(process.env.PORT || 5000, () => {
