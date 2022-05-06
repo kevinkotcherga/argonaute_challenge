@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 // dotenv permet de récupérer les informations inscrits dans .env
 const dotenv = require('dotenv');
 dotenv.config();
@@ -25,3 +26,10 @@ app.use('/argonautes', argonauteRoute);
 app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running!")
 })
+
+// Configuration pour heroku
+app.use(express.static(path.join(__dirname, '/client/build')));
+
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
