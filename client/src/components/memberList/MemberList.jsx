@@ -9,7 +9,20 @@ const MemberList = () => {
   const argonautes = useSelector((state) => state.argonautes.argonautes);
 	// useDispatch vient de la bibliothèque react-redux pour incrémenter le store
 	const dispatch = useDispatch();
-	// Au lancement du composant, axios ira récupérer la data grâce à useEffect
+
+  // toUpper permet de mettre en majsucule la première lettre de chaque nom
+  function toUpper(str) {
+return str
+    .toLowerCase()
+    .split(' ')
+    .map(function(word) {
+        return word[0].toUpperCase() + word.substr(1);
+    })
+    .join(' ');
+ }
+
+
+  // Au lancement du composant, axios ira récupérer la data grâce à useEffect
 	useEffect(() => {
     // La data est récupéré avec get et setArgonautesData de Redux
     axios.get('http://localhost:5000/argonautes')
@@ -21,7 +34,7 @@ const MemberList = () => {
 			<h2>Membres de l'équipage</h2>
 			<section className="memberList__list">
 				{argonautes?.map(argonaute => (
-					<div className="memberList__item">{argonaute.name}</div>
+					<div className="memberList__item">{toUpper(argonaute.name)}</div>
 				))}
 			</section>
 		</div>

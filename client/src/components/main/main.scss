@@ -2,17 +2,29 @@
   max-width: 960px;
   margin: 0 auto;
 
-  h2 {
-    text-align: center;
-  }
-
   .main__form {
     margin: 2em 0 4em 0;
+    text-align: center;
+    .main__top-form {
+      margin-bottom: 10px;
+    }
+    .main__error {
+      color: red;
+    }
+  }
+
+  h2 {
     text-align: center;
   }
 
   label {
     display: block;
     margin-bottom: 0.5em;
+  }
+
+  #errorDiv {
+    button {
+      margin-left: 10px;
+    }
   }
 }
