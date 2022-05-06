@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import argonautesReducer from '../feature/argonautesSlice';
 
-export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
+export default configureStore({
+	// Tous les reducers sont stockés ici
+	reducer: {
+		// picturesReducer est récupé depuis le slice
+		argonautes: argonautesReducer,
+	},
 });
