@@ -40,22 +40,3 @@ export const ArgonautesSlice = createSlice({
     },
   },
 });
-
-// 4) EXPORT
-// Les reducers sont exportés pour être utilisé dans les composants
-export const { addArgonaute, setArgonautesData } = ArgonautesSlice.actions;
-
-// STORE
-// Tous les reducers sont stockés ici dans le store
-const store = configureStore({
-  reducer: {
-    argonautes: ArgonautesSlice.reducer,
-  },
-});
-
-type RootState = ReturnType<typeof store.getState>;
-
-// selectArgonautes récupère la data du state dans redux
-export const selectArgonautes = (state: RootState) => state.argonautes.argonautes;
-
-export default store;
