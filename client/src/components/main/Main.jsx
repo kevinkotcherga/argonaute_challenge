@@ -40,7 +40,7 @@ const Main = () => {
   return (
     <div className='main'>
       <h2>Ajouter un(e) Argonaute</h2>
-        <form className="main__form" onSubmit={handleSubmit} ref={formRef}>
+        <form id='form' className="main__form" onSubmit={handleSubmit} ref={formRef}>
           <div className="main__top-form">
             <label>Nom de l'Argonaute</label>
             <input data-testid="name" id="name" name="name" type="text" placeholder="Charalampos" onChange={(e) => setName(e.target.value)}/>

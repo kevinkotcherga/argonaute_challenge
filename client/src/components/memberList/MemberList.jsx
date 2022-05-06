@@ -31,10 +31,10 @@ return str
 
 	return (
 		<div className="memberList">
-			<h2>Membres de l'équipage</h2>
+			<h2 data-testid="test">Membres de l'équipage</h2>
 			<section className="memberList__list">
-				{argonautes?.map(argonaute => (
-					<div className="memberList__item">{toUpper(argonaute.name)}</div>
+				{argonautes?.map((argonaute, id) => (
+					<div className="memberList__item" key={id}>{toUpper(argonaute.name)}</div>
 				))}
 			</section>
 		</div>
