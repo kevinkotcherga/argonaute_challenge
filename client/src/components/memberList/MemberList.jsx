@@ -1,11 +1,8 @@
 import axios from 'axios';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { selectArgonautes, setArgonautesData } from '../../store';
-import './memberList.scss'
-import {
-	setArgonautesData
-} from '../../features/argonaute/argonautesSlice';
+import './memberList.scss';
+import { setArgonautesData } from '../../features/argonaute/argonautesSlice';
 
 const MemberList = () => {
   // selectArgonautes est récupéré dans store.ts
@@ -16,7 +13,7 @@ const MemberList = () => {
 	useEffect(() => {
     axios.get('http://localhost:5000/argonautes')
     .then((res) => dispatch(setArgonautesData(res.data)));
-  }, []);
+  }, [dispatch]);
 
 	return (
 		<div className="memberList">
@@ -28,6 +25,6 @@ const MemberList = () => {
 			</section>
 		</div>
 	);
-}
+};
 
-export default MemberList
+export default MemberList;

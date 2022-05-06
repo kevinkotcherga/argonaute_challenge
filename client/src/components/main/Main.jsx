@@ -12,9 +12,11 @@ const Main = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const data = {
       name
     };
+
     console.log(data);
     axios.post('http://localhost:5000/argonautes', data).then((res) => {
 			dispatch(addArgonaute(res.data));
