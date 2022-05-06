@@ -32,7 +32,7 @@ const Main = () => {
       <h2>Ajouter un(e) Argonaute</h2>
         <form className="main__form" onSubmit={handleSubmit} ref={formRef}>
           <label>Nom de l'Argonaute</label>
-          <input id="name" name="name" type="text" placeholder="Charalampos" onChange={(e) => setName(e.target.value)}/>
+          <input data-testid="name" id="name" name="name" type="text" placeholder="Charalampos" onChange={(e) => setName(e.target.value)}/>
           <button type="submit">Envoyer</button>
         </form>
         <MemberList />
