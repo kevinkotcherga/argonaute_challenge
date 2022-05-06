@@ -1,11 +1,12 @@
 import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-// Argonaute contient 'name' qui ne sera que de type string
+// Argonaute contient 'name' qui ne sera que de type string, ça permet de ne pas envoyer
+// n'importe quoi à la db
 export type argonaute = {
 	name: string
 };
 
-// ArgonautesSliceState est un tableau à éxécuter
+// ArgonautesSliceState est un tableau de argonaute à éxécuter
 interface ArgonautesSliceState {
   argonautes: argonaute[];
 }
@@ -25,7 +26,7 @@ export const ArgonautesSlice = createSlice({
   reducers: {
     // GET
 		setArgonautesData: (state, action) => {
-			// Quand l'action est appelée, le state est récupéré (la data, au début de base nul)
+			// Quand l'action est appelée, le state est récupéré (la data, de base Argonaute[] vide)
 			// action.payload sont les données que l'on récupère en paramètre
 			state.argonautes = action.payload;
 		},
@@ -40,3 +41,7 @@ export const ArgonautesSlice = createSlice({
     },
   },
 });
+
+// 4) EXPORT
+// Les reducers sont exportés pour être utilisé dans les composants
+export const { addArgonaute, setArgonautesData } = ArgonautesSlice.actions;
