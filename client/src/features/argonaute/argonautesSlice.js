@@ -5,20 +5,20 @@ export const argonautesSlice = createSlice({
 	name: 'argonautes',
 	// 2) STATE DE BASE
 	initialState: {
-    // Le state de base est nul, il sera ensuite incrémenté avec la base de donnée
+    // Le state de base est nul, il sera ensuite incrémenté avec la base de données
     argonautes: null,
   },
 	// 3) REDUCERS
 	reducers: {
 		// GET
 		setArgonautesData: (state, action) => {
-			// Quand l'action est appelée, le state est récupéré (la data, au début de base nul)
+			// Quand l'action est appelée, le state est récupéré (la data)
 			// action.payload sont les données que l'on récupère en paramètre
 			state.argonautes = action.payload;
 		},
 		// CREATE
 		addArgonaute: (state, action) => {
-			// push ajoute l'action que l'on récupère en paramètre au state
+			// push ajoute l'action que l'on récupère en paramètre
 			state.argonautes.push(action.payload);
 		},
 	},
@@ -29,4 +29,5 @@ export const argonautesSlice = createSlice({
 export const { setArgonautesData, addArgonaute } =
 	argonautesSlice.actions;
 
+// argonauteSlice est exporté pour le store
 export default argonautesSlice.reducer;
