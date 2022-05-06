@@ -25,7 +25,8 @@ return str
   // Au lancement du composant, axios ira récupérer la data grâce à useEffect
 	useEffect(() => {
     // La data est récupéré avec get et setArgonautesData de Redux
-    axios.get('http://localhost:5000/argonautes')
+    // axios.get('http://localhost:5000/argonautes')
+    axios.get('https://argonaute-challenge.herokuapp.com/argonautes')
     .then((res) => dispatch(setArgonautesData(res.data)));
   }, [dispatch]);
 

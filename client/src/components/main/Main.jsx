@@ -22,7 +22,9 @@ const Main = () => {
     };
     // Envoie de la data avec post en utilisant addArgonaute du Slice pour passer par redux
     try {
-      await axios.post('http://localhost:5000/argonautes', data).then((res) => {
+      // await axios.post('http://localhost:5000/argonautes', data)
+      await axios.post('https://argonaute-challenge.herokuapp.com/argonautes', data)
+      .then((res) => {
         dispatch(addArgonaute(res.data));
       })
     } catch {
