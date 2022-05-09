@@ -8,13 +8,13 @@ Pour réaliser ce projet j'ai choisi de partir sur l'environnement d’exécutio
 
 2- J'ai créé le model argonaute en lui donnant les restrictions d'être de type 'string', unique, en minuscule et d'avoir obligatoirement un nom pour être valide. Le model est lié à mongoDB.
 
-3- J'ai créé les routes pour récupérés tous les argonautes (get all) et pour créer un argonaute (create). J'ai ensuite connecté mes routes à mon index et j'ai testé mon API avec postman. 
+3- J'ai créé les routes pour récupérer tous les argonautes (get all) et pour créer un argonaute (create). J'ai ensuite connecté mes routes à mon index et j'ai testé mon API avec postman. 
 
 4- Une fois l'API fonctionnel j'ai créé le client avec npx create-react-app --template redux, j'ai utilisé redux pour m'entrainner à l'utiliser. 
 
 5- J'ai créé mes composants, structuré ma page et récupéré la data avec axios et redux.
 
-6- J'ai lié le formulaire à la fonction post d'axios pour envoyé les noms des argonautes inscrits dans le formulaire à la base de données.
+6- J'ai lié le formulaire à la fonction post d'axios pour envoyer les noms des argonautes inscrits dans le formulaire à la base de données.
 
 7- J'ai testé mes composants avec Jest.
 
@@ -23,8 +23,8 @@ Pour réaliser ce projet j'ai choisi de partir sur l'environnement d’exécutio
 9- J'ai modifié les liens localhost vers des liens heroku pour faire fonctionner l'application en ligne.
 
 ## Utilisation 
-Un pluggin "Cross-origin resource sharing (CORS)" est nécessaire.
-Il est nécessaire de modifier les liens heroku vers des liens localhost dans le dossier client.
+- Un pluggin "Cross-origin resource sharing (CORS)" est nécessaire.
+- Il est nécessaire de modifier les liens heroku vers des liens localhost dans le dossier client.
 ```
 git clone git@github.com:kevinkotcherga/argonaute_challenge.git
 cd argonaute_challenge
