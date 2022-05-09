@@ -12,15 +12,14 @@ const MemberList = () => {
 
   // toUpper permet de mettre en majsucule la première lettre de chaque nom
   function toUpper(str) {
-return str
-    .toLowerCase()
-    .split(' ')
-    .map(function(word) {
-        return word[0].toUpperCase() + word.substr(1);
-    })
-    .join(' ');
- }
-
+    return str
+        .toLowerCase()
+        .split(' ')
+        .map(function(word) {
+            return word[0].toUpperCase() + word.substr(1);
+        })
+        .join(' ');
+    };
 
   // Au lancement du composant, axios ira récupérer la data grâce à useEffect
 	useEffect(() => {
