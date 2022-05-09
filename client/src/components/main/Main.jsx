@@ -6,8 +6,9 @@ import { addArgonaute } from '../../features/argonaute/argonautesSlice';
 import './main.scss';
 
 const Main = () => {
+  // setError est utilisé pour afficher le message d'erreur si un nom existe déjà
   const [error, setError] = useState(false);
-  // useState est utilisé pour récupérer le nom dans le formulaire
+  // setName est utilisé pour récupérer le nom dans le formulaire
   const [name, setName] = useState("");
   // useDispatch vient de la bibliothèque react-redux pour incrémenter le store
   const dispatch = useDispatch();
